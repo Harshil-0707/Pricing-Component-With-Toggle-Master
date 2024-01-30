@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
+
+:root {
+  /* Neutral colors */
+  --white: hsl(0, 0%, 100%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+
+  /* Linear Gradient */
+  --first-Gradient: hsl(236, 72%, 79%);
+  --second-Gradient: hsl(237, 63%, 64%);
+
+  /* Font */
+  --big-font: 70px;
+  --small-font: 18px;
+  --font-family: "Montserrat";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+  background-color: var(--Very-Light-Grayish-Blue);
+  background-position: top 0 right -1rem, bottom -4.7rem left -1.9rem;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Toggle Section */
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--Grayish-Blue);
+}
+
+#duration {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  display: block;
+}
+
+.time {
+  color: var(--Light-Grayish-Blue);
+}
+
+#button {
+  width: 55px;
+  padding: 4px;
+  height: 30px;
+  display: flex;
+  margin: 0 18px;
+  border-radius: 100px;
+  background: linear-gradient(
+    to right,
+    var(--first-Gradient),
+    var(--second-Gradient)
+  );
+  justify-content: space-between;
+}
+
+#button:hover {
+  cursor: pointer;
+  background: var(--first-Gradient);
+}
+
+#inner-button {
+  width: 45%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.btn-2 {
+  display: none;
+}
+
+/* Pricing Section */
+
+main {
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bg-wht {
+  background-color: var(--white);
+}
+
+.center {
+  display: flex;
+  text-align: center;
+  padding: 40px 36px;
+  flex-direction: column;
+  font-size: var(--small-font);
+}
+
+#basic {
+  border-radius: 10px 0 0 10px;
+}
+
+#professional {
+  margin-block: -24px;
+  border-radius: 10px;
+  color: var(--Very-Light-Grayish-Blue);
+  background: linear-gradient(var(--first-Gradient), var(--second-Gradient));
+}
+
+#master {
+  border-radius: 0 10px 10px 0;
+}
+
+.head-bg-wht {
+  color: var(--Grayish-Blue);
+}
+
+.amount-basic,
+.amount-master {
+  font-size: var(--big-font);
+  color: var(--Dark-Grayish-Blue);
+}
+
+.amount-professional {
+  font-size: var(--big-font);
+}
+
+.margin-block {
+  margin-block: 28px;
+}
+
+.item {
+  padding: 15px 80px;
+  color: var(--Grayish-Blue);
+}
+
+.head-bg-wht {
+  margin: 0 0 20px 0;
+}
+
+.head-bg-gradient {
+  margin: 25px 0 20px 0;
+}
+
+.item:nth-child(odd) {
+  border-top: 1px solid var(--Light-Grayish-Blue);
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+#professional .item:nth-child(odd) {
+  border-top: 1px solid var(--first-Gradient);
+  border-bottom: 1px solid var(--first-Gradient);
+}
+
+.btn {
+  padding: 12px 0;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+.bg-gradient-btn {
+  background: linear-gradient(
+    to right,
+    var(--first-Gradient),
+    var(--second-Gradient)
+  );
+  border: 1px solid var(--white);
+  color: var(--Very-Light-Grayish-Blue);
+}
+
+.bg-gradient-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  color: var(--second-Gradient);
+  transition: all 0.4s ease-in-out;
+  border: 1px solid var(--second-Gradient);
+}
+
+#professional .item {
+  color: var(--Very-Light-Grayish-Blue);
+}
+
+#professional .bg-wht-btn {
+  color: var(--second-Gradient);
+  background: var(--Very-Light-Grayish-Blue);
+  border: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+#professional .bg-wht-btn:hover {
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+  color: var(--Very-Light-Grayish-Blue);
+  border: 1px solid var(--Very-Light-Grayish-Blue);
+}
