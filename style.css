@@ -28,10 +28,12 @@
 }
 
 html {
+  width: 100%;
   height: 100%;
 }
 
 body {
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -90,7 +92,7 @@ span {
   background: var(--first-Gradient);
 }
 
-#inner-button {
+#button > span {
   width: 45%;
   height: 100%;
   border-radius: 50%;
@@ -120,6 +122,7 @@ main {
   padding: 40px 36px;
   flex-direction: column;
   font-size: var(--small-font);
+  box-shadow: 4px 5px 30px #41414131, -4px -5px 50px#41414131;
 }
 
 #basic {
@@ -152,11 +155,12 @@ main {
 }
 
 .margin-block {
+  width: 100%;
   margin-block: 28px;
 }
 
 .item {
-  padding: 15px 80px;
+  padding: 15px 0;
   color: var(--Grayish-Blue);
 }
 
@@ -218,4 +222,38 @@ main {
   transition: all 0.4s ease-in-out;
   color: var(--Very-Light-Grayish-Blue);
   border: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+@media (max-width: 376px) {
+  body {
+    height: auto;
+    background-repeat: no-repeat;
+    background-image: url(./images/bg-top.svg);
+    background-color: var(--Very-Light-Grayish-Blue);
+    background-position: top -2.45rem right -12rem;
+  }
+  header {
+    margin-top: 60px;
+  }
+  main {
+    width: 90%;
+    margin-top: 0px;
+    flex-direction: column;
+  }
+  #basic,
+  #master {
+    border-radius: 10px;
+  }
+  .center {
+    align-items: center;
+  }
+  .bg-wht {
+    margin-block: 50px;
+  }
+  .item {
+    padding: 20px 0;
+  }
+  .btn {
+    width: 100%;
+  }
 }
