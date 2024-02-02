@@ -80,7 +80,6 @@ h1 {
     var(--first-Gradient),
     var(--second-Gradient)
   );
-  justify-content: space-between;
 }
 
 #button:hover {
@@ -88,7 +87,7 @@ h1 {
   background: var(--first-Gradient);
 }
 
-#button > div {
+#button div {
   width: 45%;
   height: 100%;
   border-radius: 50%;
